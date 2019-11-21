@@ -736,7 +736,7 @@
 16:32:55.053 logback [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao] for files matching pattern [F:/studyWorkspace/mycat-use/target/classes/study/mycat/dao/**/*.class]
 16:32:55.053 logback [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:study/mycat/dao/**/*.class] to resources [file [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao\UserMapper.class]]
 16:32:55.054 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao\UserMapper.class]
-16:32:55.054 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'study.mycat.dao.UserMapper' mapperInterface
+16:32:55.054 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'study.mycat.dao.master.UserMapper' mapperInterface
 16:32:55.054 logback [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'dataSourceConfig.MybatisMapperConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
 16:32:55.102 logback [main] DEBUG o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced study.mycat.Start; enhanced class name is: study.mycat.Start$$EnhancerBySpringCGLIB$$45e067ab
 16:32:55.102 logback [main] DEBUG o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'start' existing class 'study.mycat.Start' with enhanced class 'study.mycat.Start$$EnhancerBySpringCGLIB$$45e067ab'
@@ -1245,9 +1245,9 @@
 16:32:55.927 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userController': AutowiredFieldElement for private study.mycat.service.UserService study.mycat.controller.UserController.userService
 16:32:55.929 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userServiceImpl'
 16:32:55.929 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'userServiceImpl'
-16:32:55.929 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [study.mycat.service.impl.UserServiceImpl]: AutowiredFieldElement for study.mycat.dao.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
+16:32:55.929 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [study.mycat.service.impl.UserServiceImpl]: AutowiredFieldElement for study.mycat.dao.master.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
 16:32:55.929 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
-16:32:55.931 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userServiceImpl': AutowiredFieldElement for study.mycat.dao.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
+16:32:55.931 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userServiceImpl': AutowiredFieldElement for study.mycat.dao.master.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
 16:32:55.931 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userMapper'
 16:32:55.931 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'userMapper'
 16:32:55.931 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'userMapper' to allow for resolving potential circular references
@@ -3803,7 +3803,7 @@ Unconditional classes:
 16:33:49.448 logback [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao] for files matching pattern [F:/studyWorkspace/mycat-use/target/classes/study/mycat/dao/**/*.class]
 16:33:49.448 logback [main] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:study/mycat/dao/**/*.class] to resources [file [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao\UserMapper.class]]
 16:33:49.448 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [F:\studyWorkspace\mycat-use\target\classes\study\mycat\dao\UserMapper.class]
-16:33:49.448 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'study.mycat.dao.UserMapper' mapperInterface
+16:33:49.448 logback [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'study.mycat.dao.master.UserMapper' mapperInterface
 16:33:49.449 logback [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'dataSourceConfig.MybatisMapperConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
 16:33:49.501 logback [main] DEBUG o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced study.mycat.Start; enhanced class name is: study.mycat.Start$$EnhancerBySpringCGLIB$$b55e9ac7
 16:33:49.501 logback [main] DEBUG o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'start' existing class 'study.mycat.Start' with enhanced class 'study.mycat.Start$$EnhancerBySpringCGLIB$$b55e9ac7'
@@ -4312,9 +4312,9 @@ Unconditional classes:
 16:33:50.263 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userController': AutowiredFieldElement for private study.mycat.service.UserService study.mycat.controller.UserController.userService
 16:33:50.264 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userServiceImpl'
 16:33:50.264 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'userServiceImpl'
-16:33:50.264 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [study.mycat.service.impl.UserServiceImpl]: AutowiredFieldElement for study.mycat.dao.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
+16:33:50.264 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [study.mycat.service.impl.UserServiceImpl]: AutowiredFieldElement for study.mycat.dao.master.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
 16:33:50.265 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
-16:33:50.266 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userServiceImpl': AutowiredFieldElement for study.mycat.dao.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
+16:33:50.266 logback [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'userServiceImpl': AutowiredFieldElement for study.mycat.dao.master.UserMapper study.mycat.service.impl.UserServiceImpl.userMapper
 16:33:50.267 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userMapper'
 16:33:50.267 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'userMapper'
 16:33:50.267 logback [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'userMapper' to allow for resolving potential circular references
@@ -6478,9 +6478,9 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 17:35:58.321 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
 17:35:58.339 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
 17:35:58.396 logback [http-nio-8080-exec-2] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-17:35:58.539 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - ==>  Preparing: SELECT id,uid,user_name FROM user 
-17:35:58.552 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - ==> Parameters: 
-17:35:58.562 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - <==      Total: 3
+17:35:58.539 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - ==>  Preparing: SELECT id,uid,user_name FROM user
+17:35:58.552 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - ==> Parameters:
+17:35:58.562 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - <==      Total: 3
 17:59:24.875 logback [Thread-8] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@db57326: startup date [Tue Nov 19 17:35:53 CST 2019]; root of context hierarchy
 17:59:24.878 logback [Thread-8] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
 17:59:24.879 logback [Thread-8] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
@@ -6524,9 +6524,9 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 17:59:37.772 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
 17:59:37.790 logback [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
 17:59:37.850 logback [http-nio-8080-exec-2] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-17:59:37.999 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - ==>  Preparing: SELECT id,uid,user_name FROM user 
-17:59:38.012 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - ==> Parameters: 
-17:59:38.023 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.UserMapper.selectAll - <==      Total: 3
+17:59:37.999 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - ==>  Preparing: SELECT id,uid,user_name FROM user
+17:59:38.012 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - ==> Parameters:
+17:59:38.023 logback [http-nio-8080-exec-2] DEBUG study.mycat.dao.master.UserMapper.selectAll - <==      Total: 3
 18:12:33.432 logback [Thread-8] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4f25b795: startup date [Tue Nov 19 17:59:31 CST 2019]; root of context hierarchy
 18:12:33.434 logback [Thread-8] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
 18:12:33.436 logback [Thread-8] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans

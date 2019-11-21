@@ -1,4 +1,4 @@
-package study.mycat.dao;
+package study.mycat.dao.master;
 
 import study.mycat.base.IKMapper;
 import study.mycat.model.UserModel;

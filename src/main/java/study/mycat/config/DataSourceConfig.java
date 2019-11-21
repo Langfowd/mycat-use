@@ -32,10 +32,14 @@ public class DataSourceConfig {
         factoryBean.setConfiguration(configuration);
         PageHelper pageHelper = new PageHelper();
         Properties properties = new Properties();
-        properties.setProperty("pageSizeZero", "true");//分页尺寸为0时查询所有纪录不再执行分页
-        properties.setProperty("reasonable", "false");//页码<=0 查询第一页，页码>=总页数查询最后一页
-        properties.setProperty("supportMethodsArguments", "true");//支持通过 Mapper 接口参数来传递分页参数
-        properties.setProperty("helperDialect", "mysql");//支持通过 Mapper 接口参数来传递分页参数
+        //分页尺寸为0时查询所有纪录不再执行分页
+        properties.setProperty("pageSizeZero", "true");
+        //页码<=0 查询第一页，页码>=总页数查询最后一页
+        properties.setProperty("reasonable", "false");
+        //支持通过 Mapper 接口参数来传递分页参数
+        properties.setProperty("supportMethodsArguments", "true");
+        //支持通过 Mapper 接口参数来传递分页参数
+        properties.setProperty("helperDialect", "mysql");
         pageHelper.setProperties(properties);
         factoryBean.setPlugins(new Interceptor[]{pageHelper});
         factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:dao/*.xml"));
@@ -62,7 +66,7 @@ public class DataSourceConfig {
         public MapperScannerConfigurer mapperScannerConfigurer() {
             MapperScannerConfigurer configurer = new MapperScannerConfigurer();
             configurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-            configurer.setBasePackage("study.mycat.dao");
+            configurer.setBasePackage("study.mycat.dao."+"master");
             //配置通用mappers
             Properties properties = new Properties();
             properties.setProperty("mappers", "study.mycat.base.IKMapper");
